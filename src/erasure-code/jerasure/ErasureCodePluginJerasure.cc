@@ -43,6 +43,8 @@ int ErasureCodePluginJerasure::factory(const std::string& directory,
       interface = new ErasureCodeJerasureReedSolomonVandermonde();
     } else if (t == "reed_sol_r6_op") {
       interface = new ErasureCodeJerasureReedSolomonRAID6();
+    } else if (t == "reed_sol_gws"){
+      interface = new ErasureCodeJerasureReedSolomonGWS();
     } else if (t == "cauchy_orig") {
       interface = new ErasureCodeJerasureCauchyOrig();
     } else if (t == "cauchy_good") {
@@ -56,7 +58,7 @@ int ErasureCodePluginJerasure::factory(const std::string& directory,
     } else {
       derr << "technique=" << t << " is not a valid coding technique. "
 	   << " Choose one of the following: "
-	   << "reed_sol_van, reed_sol_r6_op, cauchy_orig, "
+	   << "reed_sol_van, reed_sol_r6_op, reed_sol_gws, cauchy_orig, "
 	   << "cauchy_good, liberation, blaum_roth, liber8tion"
 	   << dendl;
       return -ENOENT;

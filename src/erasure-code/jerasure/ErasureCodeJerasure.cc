@@ -249,6 +249,17 @@ void ErasureCodeJerasureReedSolomonRAID6::prepare()
   matrix = reed_sol_r6_coding_matrix(k, w);
 }
 
+//
+// ErasureCodeJerasureReedSolomonGWS
+//
+int ErasureCodeJerasureReedSolomonGWS::encode_chunks(const set<int> &want_to_encode,
+				       map<int, bufferlist> *encoded)
+{}
+int ErasureCodeJerasureReedSolomonGWS::decode_chunks(const set<int> &want_to_read,
+				       const map<int, bufferlist> &chunks,
+				       map<int, bufferlist> *decoded)
+{}
+
 // 
 // ErasureCodeJerasureCauchy
 //
