@@ -260,6 +260,16 @@ int ErasureCodeJerasureReedSolomonGWS::decode_chunks(const set<int> &want_to_rea
 				       map<int, bufferlist> *decoded)
 {}
 
+void ErasureCodeJerasureReedSolomonGWS::jerasure_encode(char **data,
+                           char **coding,
+                           int blocksize){}
+int ErasureCodeJerasureReedSolomonGWS::jerasure_decode(int *erasures,
+                           char **data,
+                           char **coding,
+                           int blocksize){}
+unsigned ErasureCodeJerasureReedSolomonGWS::get_alignment() const{}
+void ErasureCodeJerasureReedSolomonGWS::prepare() {}
+
 // 
 // ErasureCodeJerasureCauchy
 //

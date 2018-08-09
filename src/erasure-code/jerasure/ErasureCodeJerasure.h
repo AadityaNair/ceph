@@ -146,7 +146,8 @@ public:
         DEFAULT_K = "10";
         DEFAULT_M = "4";
     }
-    ~ErasureCodeJerasureReedSolomonGWS() override;
+    ~ErasureCodeJerasureReedSolomonGWS() override
+    {}
     
     int encode_chunks(const std::set<int> &want_to_encode,
                   std::map<int, bufferlist> *encoded) override;
