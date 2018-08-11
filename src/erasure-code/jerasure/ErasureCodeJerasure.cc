@@ -252,23 +252,23 @@ void ErasureCodeJerasureReedSolomonRAID6::prepare()
 //
 // ErasureCodeJerasureReedSolomonGWS
 //
-int ErasureCodeJerasureReedSolomonGWS::encode_chunks(const set<int> &want_to_encode,
-				       map<int, bufferlist> *encoded)
-{}
-int ErasureCodeJerasureReedSolomonGWS::decode_chunks(const set<int> &want_to_read,
-				       const map<int, bufferlist> &chunks,
-				       map<int, bufferlist> *decoded)
-{}
+//int ErasureCodeJerasureReedSolomonGWS::encode_chunks(const set<int> &want_to_encode,
+					   //map<int, bufferlist> *encoded)
+//{}
+//int ErasureCodeJerasureReedSolomonGWS::decode_chunks(const set<int> &want_to_read,
+					   //const map<int, bufferlist> &chunks,
+					   //map<int, bufferlist> *decoded)
+//{}
 
-void ErasureCodeJerasureReedSolomonGWS::jerasure_encode(char **data,
-                           char **coding,
-                           int blocksize){}
-int ErasureCodeJerasureReedSolomonGWS::jerasure_decode(int *erasures,
-                           char **data,
-                           char **coding,
-                           int blocksize){}
-unsigned ErasureCodeJerasureReedSolomonGWS::get_alignment() const{}
-void ErasureCodeJerasureReedSolomonGWS::prepare() {}
+//void ErasureCodeJerasureReedSolomonGWS::jerasure_encode(char **data,
+                           //char **coding,
+                           //int blocksize){}
+//int ErasureCodeJerasureReedSolomonGWS::jerasure_decode(int *erasures,
+                           //char **data,
+                           //char **coding,
+                           //int blocksize){}
+//unsigned ErasureCodeJerasureReedSolomonGWS::get_alignment() const{}
+//void ErasureCodeJerasureReedSolomonGWS::prepare() {}
 
 // 
 // ErasureCodeJerasureCauchy

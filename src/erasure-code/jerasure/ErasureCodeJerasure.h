@@ -138,32 +138,34 @@ private:
   int parse(ErasureCodeProfile &profile, std::ostream *ss) override;
 };
 
-class ErasureCodeJerasureReedSolomonGWS : public ErasureCodeJerasure {
+class ErasureCodeJerasureReedSolomonGWS : public ErasureCodeJerasureReedSolomonVandermonde {
 public:
     ErasureCodeJerasureReedSolomonGWS() :
-        ErasureCodeJerasure("reed_sol_gws")
+        ErasureCodeJerasureReedSolomonVandermonde()
     {
         DEFAULT_K = "10";
         DEFAULT_M = "4";
+        DEFAULT_W = "8";
+        technique = "reed_sol_gws";
     }
     ~ErasureCodeJerasureReedSolomonGWS() override
     {}
     
-    int encode_chunks(const std::set<int> &want_to_encode,
-                  std::map<int, bufferlist> *encoded) override;
+    //int encode_chunks(const std::set<int> &want_to_encode,
+                  //std::map<int, bufferlist> *encoded) override;
 
-    int decode_chunks(const std::set<int> &want_to_read,
-                  const std::map<int, bufferlist> &chunks,
-                  std::map<int, bufferlist> *decoded) override;
-	void jerasure_encode(char **data,
-                               char **coding,
-                               int blocksize) override;
-  	int jerasure_decode(int *erasures,
-                               char **data,
-                               char **coding,
-                               int blocksize) override;
-  	unsigned get_alignment() const override;
-  	void prepare() override;
+    //int decode_chunks(const std::set<int> &want_to_read,
+                  //const std::map<int, bufferlist> &chunks,
+                  //std::map<int, bufferlist> *decoded) override;
+	//void jerasure_encode(char **data,
+                               //char **coding,
+                               //int blocksize) override;
+      //int jerasure_decode(int *erasures,
+                               //char **data,
+                               //char **coding,
+                               //int blocksize) override;
+      //unsigned get_alignment() const override;
+      //void prepare() override;
 };
 
 #define DEFAULT_PACKETSIZE "2048"
